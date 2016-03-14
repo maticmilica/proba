@@ -1,0 +1,55 @@
+GIT STUFF
+
+>> git config --global user.name "yourName"
+>> git config --global user.email "yourEmail"
+
+
+- enter folder with your project
+>> git init
+>> git add .
+>> git status 			//checkout if everything is added
+>> git commit -m "some message"
+>> git log
+
+
+// setting up ssh key
+>> ssh-keygen -t rsa -C "yourEmail"
+- enter password
+- in your personal folder open .ssh end copy your key into account settings/ssh key/add ssh key (gitHub)
+
+
+// connection to gitHub and PUSHING code to gitHub
+>> git remote add name sshKey		// copy sshKey from gitHub repository
+>> git push name branchName				// name - origin, master or some other branch name
+
+
+// editing code end pushing it again
+>> git add .
+>> git commit -m "message"
+>> git log
+>> git push name branchName
+
+// PULLING
+>> git pull origin branchName		// branchName - what branch we want to pull from
+
+
+- PUSH to send up GitHub (upload)
+- PULL to sync with GitHub; to get the latest changes 
+(DO PULL BEFORE PUSH!) 
+
+
+// BRANCHING
+>> git branch			// to see existing branches
+>> git branch branchName		// to add new branch named branchName
+>> git checkout branchName		// switching to branchName
+
+
+// copy with CLONE
+>> git clone sshKey
+- enter password
+
+
+// MERGING
+>> git merge branchName			// to get changes from master to our new branch
+
+PULL - similar to merge; synchronizes local repository with the remote repository (from remote to local)
